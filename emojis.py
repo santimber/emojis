@@ -13,6 +13,7 @@ template = """
     - Summarize the input text to one / two sentences
     - Convert the gender of the user into an emoji and include in the emoji translation of the sentence
     - Convert the summarized text to a set of emojis that describe the essence of the sentence
+    - ONLY print the emojies, not the summarized text!
 
   Here are some examples of converting gender of the user into an emoji:
     - Male = 👨
