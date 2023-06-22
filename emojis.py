@@ -70,6 +70,7 @@ st.markdown("### Your emoji'ed text")
 if text_input:
     prompt_with_text = prompt.format(gender = option_gender, text = text_input)
     translated_text = llm(prompt_with_text)
-    st.write(translated_text)
+    st.write("<span style='font-size: 2em;'>{}</span>".format(translated_text), unsafe_allow_html=True)
+
 
 
