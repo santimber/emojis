@@ -12,8 +12,8 @@ template = """
     Your goal is to:
     - Summarize the input text to one / two sentences
     - Convert the gender of the user into an emoji and include in the emoji translation of the sentence
-    - Convert the summarized text to a set of emojis that describe the essence of the sentence
-    - ONLY print the emojies, not the summarized text!
+    - Convert the summarized text to a set of emojis/Unicode characters that describe the essence of the sentence
+    - ONLY print the emojis/Unicode characters, not the summarized text!
 
   Here are some examples of converting gender of the user into an emoji:
     - Male = 👨
@@ -70,7 +70,6 @@ st.markdown("### Your emoji'ed text")
 if text_input:
     prompt_with_text = prompt.format(gender = option_gender, text = text_input)
     translated_text = llm(prompt_with_text)
-    st.write("<span style='font-size: 2em;'>{}</span>".format(translated_text), unsafe_allow_html=True)
-
+    st.write(translated_text)
 
 
